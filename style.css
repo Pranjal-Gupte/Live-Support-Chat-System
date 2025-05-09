@@ -1,0 +1,117 @@
+.open-chat-widget {
+  text-decoration: none;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  right: 28px;
+  bottom: 28px;
+  background: #4488dc;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  z-index: 999998;
+}
+.open-chat-widget:hover {
+  background: #3780da;
+}
+.open-chat-widget[data-messages]::after {
+  content: attr(data-messages);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background: #b34747;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.chat-widget {
+  position: fixed;
+  display: none;
+  right: 25px;
+  bottom: 25px;
+  box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.1);
+  z-index: 999999;
+  opacity: 0;
+  transform: translateY(100px);
+  border-radius: 5px;
+  border-color: #fff;
+  width: 300px;
+  height: 500px;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  flex-flow: column;
+  overflow: hidden;
+}
+.chat-widget.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.chat-widget .chat-widget-header {
+  display: flex;
+  width: 10%;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid #eef0f2;
+}
+.chat-widget .chat-widget-header .close-chat-widget-btn {
+  display: block;
+  text-decoration: none;
+  font-size: 28px;
+  margin-left: auto;
+  padding: 0 15px;
+  margin-bottom: 5px;
+  color: #b4bdc6;
+}
+.chat-widget .chat-widget-header .close-chat-widget-btn:hover {
+  color: #a6b0bb;
+}
+.chat-widget .chat-widget-header .previous-chat-tab-btn {
+  display: none;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 0 15px;
+  margin-bottom: 7px;
+  color: #b4bdc6;
+}
+.chat-widget .chat-widget-header .previous-chat-tab-btn:hover {
+  color: #a6b0bb;
+}
+.chat-widget .chat-widget-content {
+  display: flex;
+  flex-grow: 1;
+}
+.chat-widget .chat-widget-tabs {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.chat-widget .chat-widget-tabs .chat-widget-tab {
+  display: flex;
+  flex-grow: column;
+  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  transition: all ease 0.2s;
+}
+.chat-widget .chat-widget-tabs .chat-widget-tab.chat-widget-login-tab {
+  justify-content: center;
+}
+.chat-widget .chat-widget-tabs .chat-widget-tab.chat-widget-login-tab form {
+  display: flex;
+  flex-grow: column;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
